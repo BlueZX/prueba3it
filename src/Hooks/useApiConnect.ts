@@ -20,7 +20,7 @@ const useApiConnect = (type='',time:string|number) => {
       setIsLoading(true);
       apiConnect(request).then( res => {
         const allData = res.data[(Object.keys(res.data)[0])]
-        setData(allData.reverse().splice(0, time).reverse())
+        setData(typeof time === 'number' ? allData.reverse().splice(0, time).reverse() : allData)
         setIsLoading(false);
       }).catch(err => console.error(err))
     },
