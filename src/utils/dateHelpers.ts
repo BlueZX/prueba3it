@@ -24,13 +24,9 @@ export const urlDays = (days: number) => {
 };
 
 export const urlMonth = (months: number) => {
-    const from = now.subtract(months, 'month')
-      .format('YYYY/MM')
-      .toString();
-    
-    const to = now.format('YYYY/MM').toString();
-  console.log(from, to)
-    return `${from}/${to}`;
+    return now.subtract(months, 'month')
+    .format('YYYY/MM')
+    .toString();;
 };
 
 export const getYearMonth = (months: number) => {

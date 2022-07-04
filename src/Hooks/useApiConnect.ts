@@ -36,7 +36,7 @@ const useApiConnect = (type='',time:string|number) => {
           setRequest(`${type.toLocaleLowerCase()}/posteriores/${urlDays(time)}`)
           break;
           case 'ipc':
-          setRequest(`${type.toLocaleLowerCase()}/periodo/${urlMonth(time)}`)
+          setRequest(`${type.toLocaleLowerCase()}/posteriores/${urlMonth(time)}`)
           break;
           case 'utm':
           setRequest(`${type.toLocaleLowerCase()}/posteriores/${getYearMonth(time)}`)
