@@ -19,7 +19,8 @@ const useApiConnect = (type='',time:string|number) => {
       if (!request) return;
       setIsLoading(true);
       apiConnect(request).then( res => {
-        setData(res.data[(Object.keys(res.data)[0])])
+        const allData = res.data[(Object.keys(res.data)[0])]
+        setData(allData.reverse().splice(0, time).reverse())
         setIsLoading(false);
       }).catch(err => console.error(err))
     },
